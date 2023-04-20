@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="css\style.css"/>
+		<title>Index</title> 
+	</head>
+	
+	<body>
+		<div id="page">
+			<header id="header">
+				<div id="logo">
+					<a href="index.html"><img src="images\logo.png" id="logo_img"/></a>
+				</div>
+				<h1>Cours de natation</h1>
+			</header>
+			
+			<nav id="nav1">
+				<ul id="nav_ul">
+					<li id="nav_li"><a href="index.html" title="Accueil" alt="Accueil">Accueil</a></li>
+					<li id="nav_li"><a href="horaire.html" title="horaire" alt="horaire">Horaire</a></li>
+					<li id="nav_li"><a href="formulaire.html" title="insciption" alt="insciption">S'inscrire</a></li>
+					<li	id="nav_li"><a href="propos.html" title="A propos" alt="A propos">À propos</a></li>
+				</ul>
+			</nav>
+			
+			<section id="section">
+				<!--Formulaire-->
+				<form name="Information" enctype="text/plain" method="post" action="mailto:dany.gauthier@lepisc.com?subject=Formulaire">
+					<fieldset>
+						<!--Coordonnées-->
+						<legend>Vos Coordonnées</legend>
+						<!--Nom-->
+						<label for="Nom">Quel est votre nom?</label>
+						<input type="text" name="nom" id="nom" size="20" maxlength="20" />
+						<!--Prenom-->
+						<label for="Prenom">Quel est votre prenom?</label>
+						<input type="text" name="prenom" id="prenom" size="20" maxlength="20" />
+						<!--Mail-->
+						<label for="Mail">Quel est votre courriel?</label>
+						<input type="text" name="mail" id="mail" size="25" maxlength="25" />
+					</fieldset>
+					
+					<fieldset>
+						<legend>Information Techniques</legend>
+						<!--Postes-->
+						<p>Savez-vous nager ?
+							<!--bouton_lanceur-->
+							<input type="radio" class="radio" /> <label for="oui">Oui</label>
+							<input type="radio" class="radio" /> <label for="non">Non</label>
+						</p>
+						<!--Liste deroulante-->
+						<p>Dans quelle ville habitez-vous?</br>
+							<select name="ville" id="ville">
+							
+								<optgroup label="MRC l'Assomption">
+									<option value="repentigny">Repentigny</option>
+									<option value="legardeur">Legardeur</option>
+									<option value="lassonption">l'Assonption</option>
+								</optgroup>
+								
+								<optgroup label="MRC Des Moulins">
+									<option value="mascouche">Mascouche</option>
+									<option value="terrebonne">Terrebonne</option>
+									<option value="laplaine">Laplaine</option>
+								</optgroup>
+							</select>
+						</p>
+						<!--Commentaire-->
+						<p>
+							<label for="commentaires">Information Supplémentaire</label><br />
+							<textarea name="commentaires" id="commentaires" rows="10" cols="50"></textarea>
+						</p>
+					</fieldset>
+					<!--Bouton Envoyer/Retablir-->
+					<p><input type="submit" value="Envoyer" /> <input type="reset" value="Rétablir"/></p>
+				</form>
+		</section>
+		
+		<footer id="footer">
+			<a href="https://fr-ca.facebook.com/" target="_blank">
+					<img src="images\fb.jpg" id="fb"/>
+			</a>
+		</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="css\style.css"/>
+		<title>Index</title> 
+	</head>
+	
+	<body>
+		<div id="page">
+			<header id="header">
+				<div id="logo">
+					<a href="index.html"><img src="images\logo.png" id="logo_img"/></a>
+				</div>
+				
+				<h1>Cours de natation</h1>
+				
+			</header>
+			<nav id="nav1">
+				<ul id="nav_ul">
+					<li id="nav_li"><a href="index.html" title="Accueil" alt="Accueil">Accueil</a></li>
+					<li id="nav_li"><a href="horaire.html" title="horaire" alt="horaire">Horaire</a></li>
+					<li id="nav_li"><a href="formulaire.html" title="insciption" alt="insciption">S'inscrire</a></li>
+					<li	id="nav_li"><a href="propos.html" title="A propos" alt="A propos">À propos</a></li>
+				</ul>
+			</nav>
+			<section id="section">
+				<div id="diaporama">
+					
+					  <img class="image" src="images\images1.jpg" style="width:100%">
+					  <img class="image" src="images\images2.jpg" style="width:100%">
+					  <img class="image" src="images\images3.jpg" style="width:100%">
+
+					  <button onclick="plusDivs(-1)">&#10094;</button>
+					  <button onclick="plusDivs(1)">&#10095;</button>
+				</div>
+				
+				<!-- Script Diaporama -->
+				<script>
+						var slideIndex = 1;
+						showDivs(slideIndex);
+
+						function plusDivs(n) {
+						  showDivs(slideIndex += n);
+						}
+
+						function showDivs(n) {
+						  var i;
+						  var x = document.getElementsByClassName("image");
+						  if (n > x.length) {slideIndex = 1}    
+						  if (n < 1) {slideIndex = x.length}
+						  for (i = 0; i < x.length; i++) {
+							 x[i].style.display = "none";  
+						  }
+						  x[slideIndex-1].style.display = "block";  
+						}
+				</script>
+				<p class="txt">Un petit video</p>
+				<video id="Simple_Video" controls>
+					<source src="videos\CteVideo.mp4" type="video/mp4">
+					<source src="videos\CteVideo.ogg" type="video/ogg">
+					Oops! Votre navigateur n'est pas compatible
+				</video>
+			</section>
+			<footer id="footer">
+				<a href="https://fr-ca.facebook.com/" target="_blank">
+					<img src="images\fb.jpg" id="fb"/>
+				</a>
+			</footer>
+		</div>
+	</body>
+</html>
